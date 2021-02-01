@@ -14,8 +14,17 @@ ggplot(df, aes(x=V1, y=V2, color=Participant)) +
 ```
 
 
+
 ## Part 2
+
+Let's run some addition: 
 
 ```{r 1_do_addition, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth}
 1+1
 ```
+
+
+
+## Part 3
+
+I don't know what else to do.

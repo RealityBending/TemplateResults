@@ -76,7 +76,10 @@ summary(report::report(sessionInfo()))
 ```{r warning=FALSE, message=TRUE, results='asis'}
 df <- read.csv("data/data.csv")
 
-paste("The data consists of", report::report_participants(df, participants = "Participant", age = "Age"))
+cat(paste("The data consists of", 
+          report::report_participants(df, 
+                                      participants = "Participant", 
+                                      age = "Age")))
 ```
 
 # Descriptive Stats {.tabset}

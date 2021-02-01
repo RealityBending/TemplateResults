@@ -58,11 +58,14 @@ correlation (v0.5.0), bayestestR (v0.8.2), report (v0.2.0), magrittr
 ``` r
 df <- read.csv("data/data.csv")
 
-paste("The data consists of", report::report_participants(df, participants = "Participant", age = "Age"))
+cat(paste("The data consists of", 
+          report::report_participants(df, 
+                                      participants = "Participant", 
+                                      age = "Age")))
 ```
 
-\[1\] “The data consists of 10 participants (Mean age = 29.9, SD = 0.5,
-range: \[29.0, 30.91\])”
+The data consists of 10 participants (Mean age = 29.9, SD = 0.5, range:
+\[29.0, 30.91\])
 
 # Descriptive Stats
 
@@ -78,11 +81,17 @@ ggplot(df, aes(x=V1, y=V2, color=Participant)) +
 
 ## Part 2
 
+Let’s run some addition:
+
 ``` r
 1+1
 ```
 
     > [1] 2
+
+## Part 3
+
+I don’t know what else to do.
 
 # References
 
