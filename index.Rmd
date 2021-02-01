@@ -58,7 +58,9 @@ Download it ([**click here to download**](https://github.com/RealityBending/Resu
 
 Upload the whole folder to GitHub, go to settings and enable GitHub pages, and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/ResultsTemplate/](https://realitybending.github.io/ResultsTemplate/).
 
+- How to add references?
 
+References have to be added in `bib` format in the [*utils/bibliography.bib*](https://github.com/RealityBending/ResultsTemplate/blob/main/utils/bibliography.bib) file, and further referenced in the text like this [@ludecke2019insight].
 
 
 # Packages & Data
@@ -88,11 +90,10 @@ cat(paste("The data consists of",
 ```
 
 
-# References
-
+# Package References
 
 ```{r warning=FALSE, message=FALSE, results='asis'}
 report::cite_packages(sessionInfo())
 ```
 
-
+# References

@@ -34,6 +34,13 @@ Indeed, rendering (knitting) the files will generate an “index.html”
 file in the `/docs/` folder, which is used as the website. You can see
 an example at <https://realitybending.github.io/ResultsTemplate/>.
 
+-   How to add references?
+
+References have to be added in `bib` format in the
+[*utils/bibliography.bib*](https://github.com/RealityBending/ResultsTemplate/blob/main/utils/bibliography.bib)
+file, and further referenced in the text like this (Lüdecke, Waggoner, &
+Makowski, 2019).
+
 # Packages & Data
 
 ## Packages
@@ -50,8 +57,8 @@ ggplot2 (v3.3.2), stringr (v1.4.0), forcats (v0.5.0), tidyr (v1.1.2),
 readr (v1.3.1), dplyr (v1.0.3), rmarkdown (v2.5), tibble (v3.0.5), purrr
 (v0.3.4), parameters (v0.11.0), insight (v0.12.0), see (v0.6.1),
 performance (v0.6.1), modelbased (v0.5.1), easystats (v0.2.0),
-correlation (v0.5.0), bayestestR (v0.8.2), report (v0.2.0), magrittr
-(v2.0.1), tidyverse (v1.3.0) and knitr (v1.28).
+correlation (v0.5.0), bayestestR (v0.8.2), report (v0.2.0) and tidyverse
+(v1.3.0).
 
 ## Data
 
@@ -93,7 +100,7 @@ Let’s run some addition:
 
 I don’t know what else to do.
 
-# References
+# Package References
 
 ``` r
 report::cite_packages(sessionInfo())
@@ -162,10 +169,20 @@ report::cite_packages(sessionInfo())
 -   R Core Team (2020). R: A language and environment for statistical
     computing. R Foundation for Statistical Computing, Vienna, Austria.
     URL <https://www.R-project.org/>.
--   Stefan Milton Bache and Hadley Wickham (2020). magrittr: A
-    Forward-Pipe Operator for R. R package version 2.0.1.
-    <https://CRAN.R-project.org/package=magrittr>
 -   Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
     Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686>
--   Yihui Xie (2020). knitr: A General-Purpose Package for Dynamic
-    Report Generation in R. R package version 1.28.
+
+# References
+
+<div id="refs" class="references csl-bib-body hanging-indent"
+line-spacing="2">
+
+<div id="ref-ludecke2019insight" class="csl-entry">
+
+Lüdecke, D., Waggoner, P. D., & Makowski, D. (2019). Insight: A unified
+interface to access information from model objects in r. *Journal of
+Open Source Software*, *4*(38), 1412.
+
+</div>
+
+</div>
