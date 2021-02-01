@@ -1,0 +1,73 @@
+---
+title: "**Name of The Study**"
+subtitle: 'Data Analysis'
+output:
+  html_document:
+    theme: cerulean
+    highlight: "pygments"
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: false
+    df_print: "kable"
+    code_folding: hide
+    code_download: true
+  word_document:
+    reference_docx: utils/Template_Word.docx
+    highlight: "pygments"
+    toc: false
+    toc_depth: 3
+    df_print: "kable"
+    number_sections: true
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+editor_options: 
+  chunk_output_type: console
+bibliography: utils/bibliography.bib
+csl: utils/apa.csl
+---
+
+
+<!-- IMPORTANT: do not Knit this document by pressing the 'Knit' button. Instead, 
+Run `source("utils/render.R")` in the console. -->
+
+```{r setup, include=FALSE}
+source("utils/config.R")  # Set up the environment
+
+fast <- FALSE  # Make this false to skip the chunks
+```
+
+
+# Packages & Data
+
+## Packages
+
+```{r warning=FALSE, message=TRUE, results='asis'}
+library(easystats)
+
+summary(report::report(sessionInfo()))
+```
+
+## Data
+
+```{r warning=FALSE, message=TRUE, results='asis'}
+df <- read.csv("data/data.csv")
+
+paste("The data consists of", report::report_participants(df, participants = "Participant", age = "Age"))
+```
+
+# Descriptive Stats {.tabset}
+
+```{r, child=if (fast == FALSE) '1_descriptive.Rmd'}
+```
+
+
+# References
+
+
+```{r warning=FALSE, message=FALSE, results='asis'}
+report::cite_packages(sessionInfo())
+```
+
+

@@ -1,0 +1,21 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+## Part 1
+
+
+```{r 1_plot_scatter_basic, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth}
+ggplot(df, aes(x=V1, y=V2, color=Participant)) + 
+  geom_point() +
+  see::theme_modern()
+```
+
+
+## Part 2
+
+```{r 1_do_addition, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth}
+1+1
+```
