@@ -37,8 +37,8 @@ knitr::opts_chunk$set(
   dpi = 600,
   fig.path = "figures/",
   fig.height=figheight,
-  fig.width=figwidth,
-  fig.align = "center"
+  fig.width=figwidth
+  # fig.align = "center"
 )
 
 

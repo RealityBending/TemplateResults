@@ -1,6 +1,6 @@
 ---
-title: "**Name of The Study**"
-subtitle: 'Data Analysis'
+title: "**Results Template**"
+subtitle: "A Subtitle"
 output:
   html_document:
     theme: cerulean
@@ -29,14 +29,30 @@ csl: utils/apa.csl
 ---
 
 
-<!-- IMPORTANT: do not Knit this document by pressing the 'Knit' button. Instead, 
-Run `source("utils/render.R")` in the console. -->
+<!-- IMPORTANT: If you want to generate an html file: do not Knit this document 
+by pressing the 'Knit' button. Instead, run `source("utils/render.R")` in the console. 
+If not, it will create the output in the same folder, whereas we want it in the /docs/ folder.  -->
 
 ```{r setup, include=FALSE}
 source("utils/config.R")  # Set up the environment
 
 fast <- FALSE  # Make this false to skip the chunks
 ```
+
+# Introduction
+
+This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/ResultsTemplate/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/ResultsTemplate/word/)).
+
+
+- How to use this template?
+
+Download it ([**click here to download**](https://github.com/RealityBending/ResultsTemplate/archive/main.zip)), unzip it and edit.
+
+- How to upload it to a website?
+
+Upload the whole folder to GitHub, go to settings and enable GitHub pages, and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/ResultsTemplate/](https://realitybending.github.io/ResultsTemplate/).
+
+
 
 
 # Packages & Data
