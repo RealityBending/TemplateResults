@@ -29,9 +29,15 @@ csl: utils/apa.csl
 ---
 
 
-<!-- IMPORTANT: If you want to generate an html file: do not Knit this document 
-by pressing the 'Knit' button. Instead, run `source("utils/render.R")` in the console. 
-If not, it will create the output in the same folder, whereas we want it in the /docs/ folder.  -->
+<!-- 
+!!!! IMPORTANT !!!!
+
+Do not Knit this document by pressing the 'Knit' button. 
+
+Instead, run `source("utils/render.R")` in the console (or the relevant lines in that file). 
+
+If not, it will create the output in the same folder, whereas we want to keep it tidy in separate folders. 
+-->
 
 ```{r setup, include=FALSE}
 source("utils/config.R")  # Set up the environment
@@ -41,7 +47,7 @@ fast <- FALSE  # Make this false to skip the chunks
 
 # Introduction
 
-This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/ResultsTemplate/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/ResultsTemplate/word/)).
+This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/ResultsTemplate/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/ResultsTemplate/word/)). The README page of the repository, alongside the webpage and word document, were all created from this single [index.Rmd](https://github.com/RealityBending/ResultsTemplate/blob/main/index.Rmd) that you can edit.
 
 
 - How to use this template?
