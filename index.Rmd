@@ -77,7 +77,9 @@ Importantly, in order to render all the files, do not Knit this document by pres
 
 There an R script, [utils/render.R](https://github.com/RealityBending/ResultsTemplate/blob/main/utils/render.R), that contains the lines to render everything in its correct location. So, when you have the "index.Rmd" file opened (and your working directory is at its root), simply run **`source("utils/render.R")`** in the console (or the relevant lines in that file). This will run the rendering file and create all the files.
 
+## Contribution
 
+Do not hesitate to improve this template by updating, documenting, or expanding it! 
 
 
 # Packages & Data
