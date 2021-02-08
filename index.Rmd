@@ -34,7 +34,8 @@ csl: utils/apa.csl
 -->
 
 ```{r setup, include=FALSE}
-source("utils/config.R")  # Set up the environment
+# Set up the environment (or use local alternative `source("utils/config.R")`)
+source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/utils/config.R")  
 
 fast <- FALSE  # Make this false to skip the chunks
 ```
@@ -107,14 +108,21 @@ cat(paste("The data consists of",
 
 # Descriptive Stats {.tabset}
 
-```{r, child=if (fast == FALSE) '1_descriptive.Rmd'}
+```{r child=if (fast == FALSE) '1_descriptive.Rmd'}
 ```
 
+# Full Code
+
+The full script of executive code contained in this document is reproduced here.
+
+```{r full_code, ref.label=knitr::all_labels(), eval=FALSE}
+```
 
 # Package References
 
 ```{r warning=FALSE, message=FALSE, results='asis'}
 report::cite_packages(sessionInfo())
 ```
+
 
 # References
