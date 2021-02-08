@@ -41,6 +41,9 @@ fast <- FALSE  # Make this false to skip the chunks
 
 # Introduction
 
+![Up to date](https://github.com/RealityBending/ResultsTemplate/workflows/Knit%20and%20Publish/badge.svg)
+
+
 This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/ResultsTemplate/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/ResultsTemplate/word/)). The README page of the repository, alongside the webpage and word document, were all created from the [index.Rmd](https://github.com/RealityBending/ResultsTemplate/blob/main/index.Rmd) file that you can edit.
 
 ## Features

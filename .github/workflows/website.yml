@@ -1,10 +1,10 @@
 on: push
 
-name: Knit and Publish
+name: Website
 
 jobs:
   render:
-    name: Knit and Publish
+    name: Website
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,8 +16,8 @@ jobs:
         run: |
             Rscript -e 'install.packages(c("rmarkdown", "remotes", "tidyverse", "insight", "bayestestR", "performance", "parameters", "effectsize", "modelbased", "correlation", "see"))'
             Rscript -e 'remotes::install_github("easystats/report")'
-      # - name: Render README
-      #   run: Rscript -e 'rmarkdown::render("README.Rmd")'
+      - name: Render
+        run: Rscript -e 'source("utils/render.R")'
       # - name: Commit results
       #   run: |
       #     git commit README.md -m 'Re-build README.Rmd' || echo "No changes to commit"
