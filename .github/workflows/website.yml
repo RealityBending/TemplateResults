@@ -18,7 +18,9 @@ jobs:
             Rscript -e 'remotes::install_github("easystats/report")'
       - name: Render
         run: Rscript -e 'source("utils/render.R")'
-      # - name: Commit results
-      #   run: |
-      #     git commit README.md -m 'Re-build README.Rmd' || echo "No changes to commit"
-      #     git push origin || echo "No changes to commit"
+      - name: Commit results
+        run: |
+          git commit README.md -m 'Build README.md' || echo "No changes to commit"
+          git commit docs/index.html -m 'Build docs/index.html' || echo "No changes to commit"
+          git commit word/SupplementaryMaterials.docx -m 'Build word/SupplementaryMaterials.docx' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
