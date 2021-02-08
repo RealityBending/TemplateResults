@@ -30,13 +30,7 @@ csl: utils/apa.csl
 
 
 <!-- 
-!!!! IMPORTANT !!!!
-
-Do not Knit this document by pressing the 'Knit' button. 
-
-Instead, run `source("utils/render.R")` in the console (or the relevant lines in that file). 
-
-If not, it will create the output in the same folder, whereas we want to keep it tidy in separate folders. 
+!!!! IMPORTANT: run `source("utils/render.R")` to publish instead of clicking on 'Knit'
 -->
 
 ```{r setup, include=FALSE}
@@ -47,20 +41,42 @@ fast <- FALSE  # Make this false to skip the chunks
 
 # Introduction
 
-This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/ResultsTemplate/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/ResultsTemplate/word/)). The README page of the repository, alongside the webpage and word document, were all created from this single [index.Rmd](https://github.com/RealityBending/ResultsTemplate/blob/main/index.Rmd) that you can edit.
+This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/ResultsTemplate/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/ResultsTemplate/word/)). The README page of the repository, alongside the webpage and word document, were all created from the [index.Rmd](https://github.com/RealityBending/ResultsTemplate/blob/main/index.Rmd) file that you can edit.
 
+## Features
 
-- How to use this template?
+- [x] APA citations
+- [x] Word + publishable html version
+- [x] Tidy organisation (separate files for independent analyses)
+- [x] Great default configuration
+
+## Installation
+
+- **How to use this template?**
 
 Download it ([**click here to download**](https://github.com/RealityBending/ResultsTemplate/archive/main.zip)), unzip it and edit.
 
-- How to upload it to a website?
+- **How to upload it to a website?**
 
 Upload the whole folder to GitHub, go to settings and enable GitHub pages, and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/ResultsTemplate/](https://realitybending.github.io/ResultsTemplate/).
 
-- How to add references?
+- **How to add references?**
 
 References have to be added in `bib` format in the [*utils/bibliography.bib*](https://github.com/RealityBending/ResultsTemplate/blob/main/utils/bibliography.bib) file, and further referenced in the text like this [@ludecke2019insight].
+
+## Structure
+
+Most files that you'll need to create / edit will be written in [**rmarkdown**](https://rmarkdown.rstudio.com/lesson-1.html), which consists of a mix of markdown text and R chunks of code.
+
+The main file is named [**index.Rmd**](https://github.com/RealityBending/ResultsTemplate/blob/main/index.Rmd). However, to avoid having overly long files, the different (and independent) analyses parts are actually split in other documents. For instance, in this template example, the descriptive statistics section is in the [**1_descriptive.Rmd**](https://github.com/RealityBending/ResultsTemplate/blob/main/1_descriptive.Rmd) file. As you can [see in the index file](https://github.com/RealityBending/ResultsTemplate/blob/690f7947da0fc8ac85eaf6fb87fafeaa46fb3c50/index.Rmd#L89-L90), this file is then integrated as a child document (i.e., it is merged). This makes it very convenient to have a clear structure with well-organized files, that are put together only when merged.
+
+## Render and Publish
+
+Importantly, in order to render all the files, do not Knit this document by pressing the 'Knit' button. If you do, it will create an output file (for instance `index.html`) in the root folder, alongside `index.Rmd`. This is **not what we want**, as we want to keep the output files tidy in separate folders (for instance, the html version should be in the `/docs/` folder, as this is where the website will look for). 
+
+There an R script, [utils/render.R](https://github.com/RealityBending/ResultsTemplate/blob/main/utils/render.R), that contains the lines to render everything in its correct location. So, when you have the "index.Rmd" file opened (and your working directory is at its root), simply run **`source("utils/render.R")`** in the console (or the relevant lines in that file). This will run the rendering file and create all the files.
+
+
 
 
 # Packages & Data

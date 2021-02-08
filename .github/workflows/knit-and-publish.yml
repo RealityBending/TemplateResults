@@ -1,0 +1,23 @@
+on: push
+
+name: Knit and Publish
+
+jobs:
+  render:
+    name: Knit and Publish
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@v1
+      - uses: r-lib/actions/setup-pandoc@v1
+      # - uses: r-lib/actions/setup-tinytex@v1
+      # - run: tlmgr --version
+      - name: Install Dependencies
+        run: Rscript -e 'install.packages(c("rmarkdown", "remotes", "tidyverse", "insight", "bayestestR", "performance", "parameters", "effectsize", "modelbased", "correlation", "see"))'
+        run: Rscript -e 'remotes::install_github("easystats/report")'
+      # - name: Render README
+      #   run: Rscript -e 'rmarkdown::render("README.Rmd")'
+      # - name: Commit results
+      #   run: |
+      #     git commit README.md -m 'Re-build README.Rmd' || echo "No changes to commit"
+      #     git push origin || echo "No changes to commit"
