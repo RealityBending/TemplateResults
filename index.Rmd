@@ -49,6 +49,7 @@ This is a template for a data analysis folder that can be easily exported as a [
 - [x] Word + publishable html version
 - [x] Tidy organisation (separate files for independent analyses)
 - [x] Great default configuration
+- [x] And more!
 
 ## Installation
 
