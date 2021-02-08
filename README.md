@@ -21,7 +21,12 @@ Features
 --------
 
 -   [x] APA citations
--   [x] Word + publishable html version
+-   [x] Rendered as a [README
+    page](https://github.com/RealityBending/TemplateResults/blob/main/README.md),
+    a [published
+    website](https://realitybending.github.io/TemplateResults/) and a
+    [word
+    document](https://github.com/RealityBending/TemplateResults/raw/main/word/SupplementaryMaterials.docx)
 -   [x] Tidy organisation (separate files for independent analyses)
 -   [x] Great default configuration
 -   [x] And more!
