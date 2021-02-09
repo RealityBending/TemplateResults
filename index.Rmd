@@ -126,11 +126,14 @@ Do not hesitate to improve this template by updating, documenting, or expanding 
 
 ## Packages
 
+This document was prepared on `r format(Sys.Date())`. 
+
 ```{r warning=FALSE, message=TRUE, results='asis'}
 library(easystats)
 
 summary(report::report(sessionInfo()))
 ```
+
 
 ## Data
 
