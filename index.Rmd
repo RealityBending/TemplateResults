@@ -25,6 +25,7 @@ output:
   pdf_document:
     toc: yes
     toc_depth: '3'
+    latex_engine: xelatex
 editor_options:
   chunk_output_type: console
 bibliography: utils/bibliography.bib
@@ -51,11 +52,15 @@ if (!knitr::is_latex_output()) {
 }
 ```
 
-This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/TemplateResults/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/TemplateResults/word/)). The README page of the repository, alongside the webpage and word document, were all created from the [index.Rmd](https://github.com/RealityBending/TemplateResults/blob/main/index.Rmd) file that you can edit.
+This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/TemplateResults/) or as **Supplementary Materials** (e.g., as a [Word document](https://realitybending.github.io/TemplateResults/word_and_pdf/) or a PDF). 
+
+How does it look like? Just like this! The README page of this repository, alongside the webpage and word document, were all created from the [index.Rmd](https://github.com/RealityBending/TemplateResults/blob/main/index.Rmd) file.
+
+This means you can easily **share** your data analysis, either by attaching the *PDF* or *Word* file to the publication, or by directly providing the URL of your GitHub repository: the readers can then enjoy your awesome open-access work in a convenient and transparent way.
 
 ## Features
 
-- [x] Rendered as a [README page](https://github.com/RealityBending/TemplateResults/blob/main/README.md), a [published website](https://realitybending.github.io/TemplateResults/) and a [word document](https://github.com/RealityBending/TemplateResults/raw/main/word/SupplementaryMaterials.docx)
+- [x] Rendered as a [README page](https://github.com/RealityBending/TemplateResults/blob/main/README.md), a [published website](https://realitybending.github.io/TemplateResults/) and a [word document](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
 - [x] APA citations
 - [x] Tidy organisation (separate files for independent analyses)
 - [x] Great default configuration
