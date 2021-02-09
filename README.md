@@ -5,12 +5,6 @@
 Introduction
 ============
 
-![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg)
-[![Website](https://img.shields.io/badge/repo-README-2196F3)](https://github.com/RealityBending/TemplateResults)
-[![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/)
-[![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-[![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
-
 This is a template for a data analysis folder that can be easily
 exported as a
 [**webpage**](https://realitybending.github.io/TemplateResults/) or as
@@ -268,13 +262,13 @@ source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/ut
 fast <- FALSE  # Make this false to skip the chunks
 # This chunk is a bit complex so don't worry about it: it's made to add badges to the HTML versions
 # You have to replace the links accordingly
-if (!any(c("word_document", "pdf_document") %in% rmarkdown::all_output_formats(knitr::current_input())[1])) {
-  cat("![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg) 
-      [![Website](https://img.shields.io/badge/repo-README-2196F3)](https://github.com/RealityBending/TemplateResults) 
-      [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/) 
-      [![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx) 
-      [![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
-}
+# if (!any(c("word_document", "pdf_document") %in% rmarkdown::all_output_formats(knitr::current_input())[1])) {
+#   cat("![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg) 
+#       [![Website](https://img.shields.io/badge/repo-Readme-2196F3)](https://github.com/RealityBending/TemplateResults) 
+#       [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/) 
+#       [![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx) 
+#       [![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
+# }
 library(easystats)
 
 summary(report::report(sessionInfo()))
