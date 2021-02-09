@@ -79,7 +79,7 @@ In this repo, with have set up a [GitHub action](https://github.com/RealityBendi
 
 - **But I don't want do upload all my data**
 
-In that case, you'll need to 1) deactivate (i.e., remove the action file) the automatic rendering by GitHub (as no data will be stored on GitHub) and 2) mark the **data** folder as "to be ignored" (so that it won't be uploaded). This can be done by adding `/data/` to the [**.gitignore**](https://github.com/RealityBending/TemplateResults/blob/main/.gitignore) file (that you can open with a notepad). This means that you can still store the data here locally, and generate the documents accordingly, but the data folder will be ignored by git and never uploaded to GitHub.
+In that case, you'll need to 1) deactivate (i.e., remove the action file) the automatic rendering by GitHub (as no data will be stored on GitHub) and 2) mark the **data** folder as "to be ignored" (so that it won't be uploaded). This can be done by adding `/data/` to the [**.gitignore**](https://github.com/RealityBending/TemplateResults/blob/main/.gitignore) file (that you can open with a notepad). This means that you can still store the data here locally, and generate the documents accordingly, but the data folder will be ignored by git and never uploaded to GitHub. This way, you can still have a cool website, an open-access script, but the data is safe with you.
 
 - **How to add references?**
 
