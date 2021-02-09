@@ -5,7 +5,7 @@
 Introduction
 ============
 
-![Website](https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg)
+![](https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg)
 
 This is a template for a data analysis folder that can be easily
 exported as a
@@ -65,6 +65,19 @@ repository. This means that the final documents here are always
 you can remove this GitHub action (just remove the
 `.github/workflows/website.yml` file) if you prefer to generate the
 documents manually only.
+
+-   **But I don’t want do upload all my data**
+
+In that case, you’ll need to 1) deactivate (i.e., remove the action
+file) the automatic rendering by GitHub (as no data will be stored on
+GitHub) and 2) mark the **data** folder as “to be ignored” (so that it
+won’t be uploaded). This can be done by adding `/data/` to the
+[**.gitignore**](https://github.com/RealityBending/TemplateResults/blob/main/.gitignore)
+file (that you can open with a notepad). This means that you can still
+store the data here locally, and generate the documents accordingly, but
+the data folder will be ignored by git and never uploaded to GitHub.
+This way, you can still have a cool website, an open-access script, but
+the data is safe with you.
 
 -   **How to add references?**
 
@@ -200,6 +213,9 @@ reproduced here.
 source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/utils/config.R")  
 
 fast <- FALSE  # Make this false to skip the chunks
+if (!knitr::is_latex_output()) {
+  knitr::include_graphics("https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg")
+}
 library(easystats)
 
 summary(report::report(sessionInfo()))
