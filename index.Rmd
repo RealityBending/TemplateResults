@@ -77,6 +77,10 @@ If your repo is not already connected to GitHub, then create a new repository an
 
 In this repo, with have set up a [GitHub action](https://github.com/RealityBending/TemplateResults/blob/main/.github/workflows/website.yml) that generates all the output files everytime someone commit to the repository. This means that the final documents here are always "up-to-date" with the *Rmds* (as shown by the green badge). That said, you can remove this GitHub action (just remove the `.github/workflows/website.yml` file) if you prefer to generate the documents manually only.
 
+- **But I don't want do upload all my data**
+
+In that case, you'll need to 1) deactivate (i.e., remove the action file) the automatic rendering by GitHub (as no data will be stored on GitHub) and 2) mark the **data** folder as "to be ignored" (so that it won't be uploaded). This can be done by adding `/data/` to the [**.gitignore**](https://github.com/RealityBending/TemplateResults/blob/main/.gitignore) file (that you can open with a notepad). This means that you can still store the data here locally, and generate the documents accordingly, but the data folder will be ignored by git and never uploaded to GitHub.
+
 - **How to add references?**
 
 References have to be added in `bib` format in the [*utils/bibliography.bib*](https://github.com/RealityBending/TemplateResults/blob/main/utils/bibliography.bib) file, and further referenced in the text like this `[@ludecke2019insight]` [@ludecke2019insight].
