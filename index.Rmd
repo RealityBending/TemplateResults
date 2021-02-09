@@ -24,7 +24,7 @@ output:
     toc_depth: 3
   pdf_document:
     toc: yes
-    toc_depth: '3'
+    toc_depth: '2'
     latex_engine: xelatex
 editor_options:
   chunk_output_type: console
@@ -46,13 +46,19 @@ fast <- FALSE  # Make this false to skip the chunks
 
 # Introduction
 
-```{r badges, warning=FALSE, message=TRUE, echo=FALSE}
-if (!knitr::is_latex_output()) {
-  knitr::include_graphics("https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg")
+```{r badges, echo=FALSE, message=TRUE, warning=FALSE, results='asis'}
+# This chunk is a bit complex so don't worry about it: it's made to add badges to the HTML versions
+# You have to replace the links accordingly
+if (!any(c("word_document", "pdf_document") %in% rmarkdown::all_output_formats(knitr::current_input())[1])) {
+  cat("![Output](https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg) 
+      [![Website](https://img.shields.io/badge/repo-README-2196F3)](https://github.com/RealityBending/TemplateResults) 
+      [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/) 
+      [![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx) 
+      [![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
 }
 ```
 
-This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/TemplateResults/) or as **Supplementary Materials** (e.g., as a [**Word document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx) or a [**PDF**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)). 
+This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/TemplateResults/) or as **Supplementary Materials** (e.g., as a [**Word document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx) or a [**PDF**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)).
 
 How does it look like? Just like this! The README page of this repository, alongside the [webpage](https://realitybending.github.io/TemplateResults/) and the word and PDF documents, were all created from the [index.Rmd](https://github.com/RealityBending/TemplateResults/blob/main/index.Rmd) file.
 
@@ -107,13 +113,13 @@ The main file is named [**index.Rmd**](https://github.com/RealityBending/Templat
 
 ## Render and Publish
 
-Importantly, in order to render all the files, do not Knit this document by pressing the 'Knit' button. If you do, it will create an output file (for instance `index.html`) in the root folder, alongside `index.Rmd`. This is **not what we want**, as we want to keep the output files tidy in separate folders (for instance, the html version should be in the `/docs/` folder, as this is where the website will look for). 
+Importantly, in order to render all the files, do not Knit this document by pressing the 'Knit' button. If you do, it will create an output file (for instance `index.html`) in the root folder, alongside `index.Rmd`. This is **not what we want**, as we want to keep the output files tidy in separate folders (for instance, the html version should be in the `/docs/` folder, as this is where the website will look for).
 
 There an R script, [utils/render.R](https://github.com/RealityBending/TemplateResults/blob/main/utils/render.R), that contains the lines to render everything in its correct location. So, when you have the "index.Rmd" file opened (and your working directory is at its root), simply run **`source("utils/render.R")`** in the console (or the relevant lines in that file). This will run the rendering file and create all the files.
 
 ## Contribution
 
-Do not hesitate to improve this template by updating, documenting, or expanding it! 
+Do not hesitate to improve this template by updating, documenting, or expanding it!
 
 
 # Packages & Data
@@ -131,16 +137,23 @@ summary(report::report(sessionInfo()))
 ```{r warning=FALSE, message=TRUE, results='asis'}
 df <- read.csv("data/data.csv")
 
-cat(paste("The data consists of", 
-          report::report_participants(df, 
-                                      participants = "Participant", 
+cat(paste("The data consists of",
+          report::report_participants(df,
+                                      participants = "Participant",
                                       age = "Age")))
 ```
 
 # Descriptive Stats {.tabset}
 
+Notice the `{.tabset}` tag after the section name. This will show the subsections as different tabs (in html only).
 ```{r child=if (fast == FALSE) '1_descriptive.Rmd'}
 ```
+
+# Inferential Stats
+
+```{r child=if (fast == FALSE) '2_inferential.Rmd'}
+```
+
 
 # Full Code
 
