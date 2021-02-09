@@ -15,4 +15,4 @@ render('index.Rmd', output_format = "html_document", output_dir = "docs/")
 render('index.Rmd', output_format = "word_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
 
 # Render PDF
-render('index.Rmd', output_format = "pdf_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
+# render('index.Rmd', output_format = "pdf_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
