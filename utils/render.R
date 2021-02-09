@@ -11,5 +11,8 @@ render('index.Rmd', output_format = md_document(variant = "markdown_github"), ou
 # Render HTML
 render('index.Rmd', output_format = "html_document", output_dir = "docs/")
 
-# Render HTML
-render('index.Rmd', output_format = "word_document", output_dir = "word/", output_file = "SupplementaryMaterials")
+# Render Word
+render('index.Rmd', output_format = "word_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
+
+# Render PDF
+# render('index.Rmd', output_format = "pdf", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")

@@ -1,28 +1,31 @@
 ---
-title: "**Results Template**"
-subtitle: "A Subtitle"
+title: '**Results Template**'
+subtitle: A Subtitle
 output:
   html_document:
     theme: cerulean
-    highlight: "pygments"
-    toc: true
+    highlight: pygments
+    toc: yes
     toc_depth: 3
-    toc_float: true
-    number_sections: false
-    df_print: "kable"
+    toc_float: yes
+    number_sections: no
+    df_print: kable
     code_folding: hide
-    code_download: true
+    code_download: yes
   word_document:
     reference_docx: utils/Template_Word.docx
-    highlight: "pygments"
-    toc: false
+    highlight: pygments
+    toc: no
     toc_depth: 3
-    df_print: "kable"
-    number_sections: true
+    df_print: kable
+    number_sections: yes
   rmarkdown::html_vignette:
-    toc: true
+    toc: yes
     toc_depth: 3
-editor_options: 
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+editor_options:
   chunk_output_type: console
 bibliography: utils/bibliography.bib
 csl: utils/apa.csl
@@ -33,7 +36,7 @@ csl: utils/apa.csl
 !!!! IMPORTANT: run `source("utils/render.R")` to publish instead of clicking on 'Knit'
 -->
 
-```{r setup, include=FALSE}
+```{r setup, warning=FALSE, message=TRUE, include=FALSE}
 # Set up the environment (or use local alternative `source("utils/config.R")`)
 source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/utils/config.R")  
 
@@ -42,7 +45,11 @@ fast <- FALSE  # Make this false to skip the chunks
 
 # Introduction
 
-![Website](https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg)
+```{r badges, warning=FALSE, message=TRUE, echo=FALSE}
+if (!knitr::is_latex_output()) {
+  knitr::include_graphics("https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg")
+}
+```
 
 This is a template for a data analysis folder that can be easily exported as a [**webpage**](https://realitybending.github.io/TemplateResults/) or as **Supplementary Materials** (e.g., as a [word document](https://realitybending.github.io/TemplateResults/word/)). The README page of the repository, alongside the webpage and word document, were all created from the [index.Rmd](https://github.com/RealityBending/TemplateResults/blob/main/index.Rmd) file that you can edit.
 
