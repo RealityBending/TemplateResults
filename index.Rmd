@@ -48,8 +48,8 @@ This is a template for a data analysis folder that can be easily exported as a [
 
 ## Features
 
-- [x] APA citations
 - [x] Rendered as a [README page](https://github.com/RealityBending/TemplateResults/blob/main/README.md), a [published website](https://realitybending.github.io/TemplateResults/) and a [word document](https://github.com/RealityBending/TemplateResults/raw/main/word/SupplementaryMaterials.docx)
+- [x] APA citations
 - [x] Tidy organisation (separate files for independent analyses)
 - [x] Great default configuration
 - [x] And more!
@@ -59,14 +59,24 @@ This is a template for a data analysis folder that can be easily exported as a [
 - **How to use this template?**
 
 Download it ([**click here to download**](https://github.com/RealityBending/TemplateResults/archive/main.zip)), unzip it and edit.
+Alternatively, you click on the [**Use this template**](https://github.com/RealityBending/TemplateResults/generate) button at the top of this screen to create a GitHub repository with all the content copied (then you just need to clone the repo to your local machine).
+
 
 - **How to upload it to a website?**
 
-Upload the whole folder to GitHub, go to settings and enable GitHub pages, and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/TemplateResults/](https://realitybending.github.io/TemplateResults/).
+If your repo is not already connected to GitHub, then create a new repository and upload all the content (so that it looks like this repo). Then, go to settings and enable **GitHub pages** (i.e., that gives you a webpage from an html stored on GitHub), and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/TemplateResults/](https://realitybending.github.io/TemplateResults/).
+
+- **To knit or not to knit**
+
+In this repo, with have set up a [GitHub action](https://github.com/RealityBending/TemplateResults/blob/main/.github/workflows/website.yml) that generates all the output files everytime someone commit to the repository. This means that the final documents here are always "up-to-date" with the *Rmds* (as shown by the green badge). That said, you can remove this GitHub action (just remove the `.github/workflows/website.yml` file) if you prefer to generate the documents manually only.
 
 - **How to add references?**
 
-References have to be added in `bib` format in the [*utils/bibliography.bib*](https://github.com/RealityBending/TemplateResults/blob/main/utils/bibliography.bib) file, and further referenced in the text like this [@ludecke2019insight].
+References have to be added in `bib` format in the [*utils/bibliography.bib*](https://github.com/RealityBending/TemplateResults/blob/main/utils/bibliography.bib) file, and further referenced in the text like this `[@ludecke2019insight]` [@ludecke2019insight].
+
+- **It doesn't work / I have questions / I have ideas**
+
+Just [**open an issue**](https://github.com/RealityBending/TemplateResults/issues) and we'll be happy to assist ☺
 
 ## Structure
 
