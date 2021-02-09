@@ -2,7 +2,8 @@
 !!!! IMPORTANT: run `source("utils/render.R")` to publish instead of clicking on 'Knit'
 -->
 
-# Introduction
+Introduction
+============
 
 ![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg)
 [![Website](https://img.shields.io/badge/repo-Readme-2196F3)](https://github.com/RealityBending/TemplateResults)
@@ -31,7 +32,8 @@ attaching the *PDF* or *Word* file to the publication (as
 GitHub repository: the readers can then enjoy your awesome open-access
 work in a convenient and transparent way.
 
-## Features
+Features
+--------
 
 -   [x] Automatically generates different types of document:
     -   A [README
@@ -50,7 +52,8 @@ work in a convenient and transparent way.
 -   [x] Great default configuration
 -   [x] And more!
 
-## Installation
+Installation
+------------
 
 -   **How to use this template?**
 
@@ -110,7 +113,8 @@ Just [**open an
 issue**](https://github.com/RealityBending/TemplateResults/issues) and
 we’ll be happy to assist ☺
 
-## Structure
+Structure
+---------
 
 Most files that you’ll need to create / edit will be written in
 [**rmarkdown**](https://rmarkdown.rstudio.com/lesson-1.html), which
@@ -122,14 +126,15 @@ However, to avoid having overly long files, the different (and
 independent) analyses parts are actually split in other documents. For
 instance, in this template example, the descriptive statistics section
 is in the
-[**1_descriptive.Rmd**](https://github.com/RealityBending/TemplateResults/blob/main/1_descriptive.Rmd)
+[**1\_descriptive.Rmd**](https://github.com/RealityBending/TemplateResults/blob/main/1_descriptive.Rmd)
 file. As you can [see in the index
 file](https://github.com/RealityBending/TemplateResults/blob/690f7947da0fc8ac85eaf6fb87fafeaa46fb3c50/index.Rmd#L89-L90),
 this file is then integrated as a child document (i.e., it is merged).
 This makes it very convenient to have a clear structure with
 well-organized files, that are put together only when merged.
 
-## Render and Publish
+Render and Publish
+------------------
 
 Importantly, in order to render all the files, do not Knit this document
 by pressing the ‘Knit’ button. If you do, it will create an output file
@@ -146,14 +151,17 @@ directory is at its root), simply run **`source("utils/render.R")`** in
 the console (or the relevant lines in that file). This will run the
 rendering file and create all the files.
 
-## Contribution
+Contribution
+------------
 
 Do not hesitate to improve this template by updating, documenting, or
 expanding it!
 
-# Packages & Data
+Packages & Data
+===============
 
-## Packages
+Packages
+--------
 
 This document was prepared on 2021-02-09.
 
@@ -163,16 +171,17 @@ library(easystats)
 summary(report::report(sessionInfo()))
 ```
 
-The analysis was done using the R Statistical language (v4.0.1; R Core
-Team, 2020) on Windows 10 x64, using the packages effectsize (v0.4.3.1),
-ggplot2 (v3.3.2), stringr (v1.4.0), forcats (v0.5.0), tidyr (v1.1.2),
-readr (v1.3.1), dplyr (v1.0.3), rmarkdown (v2.5), tibble (v3.0.5), purrr
-(v0.3.4), parameters (v0.11.0.1), insight (v0.12.0.1), see (v0.6.1),
-performance (v0.6.1.1), modelbased (v0.5.1), easystats (v0.2.0),
-correlation (v0.5.0.1), bayestestR (v0.8.2.1), report (v0.2.0) and
-tidyverse (v1.3.0).
+The analysis was done using the R Statistical language (v4.0.3; R Core
+Team, 2020) on macOS Catalina 10.15.7, using the packages effectsize
+(v0.4.3.2), ggplot2 (v3.3.3), stringr (v1.4.0), tidyr (v1.1.2), forcats
+(v0.5.1), readr (v1.4.0), dplyr (v1.0.4), rmarkdown (v2.6), tibble
+(v3.0.6), purrr (v0.3.4), parameters (v0.11.0.1), insight (v0.12.0.1),
+see (v0.6.2.1), performance (v0.7.0), modelbased (v0.5.1), easystats
+(v0.2.0), correlation (v0.5.1), bayestestR (v0.8.2.1), report (v0.2.0)
+and tidyverse (v1.3.0).
 
-## Data
+Data
+----
 
 ``` r
 df <- read.csv("data/data.csv")
@@ -186,12 +195,14 @@ cat(paste("The data consists of",
 The data consists of 10 participants (Mean age = 29.9, SD = 0.5, range:
 \[29.0, 30.91\])
 
-# Descriptive Stats
+Descriptive Stats
+=================
 
 Notice the `{.tabset}` tag after the section name. This will show the
 subsections as different tabs (in html only).
 
-## Part 1
+Part 1
+------
 
 Here’s a cool plot:
 
@@ -203,7 +214,8 @@ ggplot(df, aes(x=V1, y=V2, color=Participant)) +
 
 ![](figures/1_plot_scatter_basic-1.png)
 
-## Part 2
+Part 2
+------
 
 That’s another great plot:
 
@@ -214,7 +226,8 @@ plot(bayestestR::estimate_density(df[c("V1", "V2")])) +
 
 ![](figures/1_plot_density-1.png)
 
-## Part 3
+Part 3
+------
 
 Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not.
 It’s not a story the Jedi would tell you. It’s a Sith legend. Darth
@@ -228,7 +241,8 @@ course, he did. Unfortunately, he taught his apprentice everything he
 knew, then his apprentice killed him in his sleep. Ironic. He could save
 others from death, but not himself.
 
-# Inferential Stats
+Inferential Stats
+=================
 
 Here is another analysis that is contained in a separate file. Let’s
 check-out this linear regression model (note that, in the code chunk
@@ -241,7 +255,8 @@ performance::check_model(model)
 
 ![](figures/2_plot_model-1.png)
 
-# Full Code
+Full Code
+=========
 
 The full script of executive code contained in this document is
 reproduced here.
@@ -279,7 +294,8 @@ model <- lm(Petal.Length ~ Sepal.Length, data=iris)
 performance::check_model(model)
 ```
 
-# Package References
+Package References
+==================
 
 ``` r
 report::cite_packages(sessionInfo())
@@ -292,76 +308,77 @@ report::cite_packages(sessionInfo())
     Springer-Verlag New York, 2016.
 -   Hadley Wickham (2019). stringr: Simple, Consistent Wrappers for
     Common String Operations. R package version 1.4.0.
-    <https://CRAN.R-project.org/package=stringr>
--   Hadley Wickham (2020). forcats: Tools for Working with Categorical
-    Variables (Factors). R package version 0.5.0.
-    <https://CRAN.R-project.org/package=forcats>
+    <a href="https://CRAN.R-project.org/package=stringr" class="uri">https://CRAN.R-project.org/package=stringr</a>
 -   Hadley Wickham (2020). tidyr: Tidy Messy Data. R package version
-    1.1.2. <https://CRAN.R-project.org/package=tidyr>
--   Hadley Wickham, Jim Hester and Romain Francois (2018). readr: Read
-    Rectangular Text Data. R package version 1.3.1.
-    <https://CRAN.R-project.org/package=readr>
+    1.1.2.
+    <a href="https://CRAN.R-project.org/package=tidyr" class="uri">https://CRAN.R-project.org/package=tidyr</a>
+-   Hadley Wickham (2021). forcats: Tools for Working with Categorical
+    Variables (Factors). R package version 0.5.1.
+    <a href="https://CRAN.R-project.org/package=forcats" class="uri">https://CRAN.R-project.org/package=forcats</a>
+-   Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text
+    Data. R package version 1.4.0.
+    <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>
 -   Hadley Wickham, Romain François, Lionel Henry and Kirill Müller
     (2021). dplyr: A Grammar of Data Manipulation. R package version
-    1.0.3. <https://CRAN.R-project.org/package=dplyr>
+    1.0.4.
+    <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>
 -   JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi
     and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and
     Winston Chang and Richard Iannone (2020). rmarkdown: Dynamic
-    Documents for R. R package version 2.5. URL
-    <https://rmarkdown.rstudio.com>.
+    Documents for R. R package version 2.6. URL
+    <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.
 -   Kirill Müller and Hadley Wickham (2021). tibble: Simple Data Frames.
-    R package version 3.0.5. <https://CRAN.R-project.org/package=tibble>
+    R package version 3.0.6.
+    <a href="https://CRAN.R-project.org/package=tibble" class="uri">https://CRAN.R-project.org/package=tibble</a>
 -   Lionel Henry and Hadley Wickham (2020). purrr: Functional
     Programming Tools. R package version 0.3.4.
-    <https://CRAN.R-project.org/package=purrr>
--   Lüdecke D, Ben-Shachar M, Patil I, Makowski D (2020). “parameters:
-    Extracting, Computing and Exploring theParameters of Statistical
-    Models using R.” *Journal of Open Source Software*, *5*(53), 2445.
-    <doi:10.21105/joss.02445> (URL:
-    <https://doi.org/10.21105/joss.02445>).
+    <a href="https://CRAN.R-project.org/package=purrr" class="uri">https://CRAN.R-project.org/package=purrr</a>
+-   Lüdecke D, Ben-Shachar M, Patil I, Makowski D (2020).
+    “parameters:Extracting, Computing and Exploring the Parameters of
+    StatisticalModels using R.” *Journal of Open Source Software*,
+    *5*(53), 2445.
+    <a href="doi:10.21105/joss.02445" class="uri">doi:10.21105/joss.02445</a>
+    (URL:
+    <a href="https://doi.org/10.21105/joss.02445" class="uri">https://doi.org/10.21105/joss.02445</a>).
 -   Lüdecke D, Waggoner P, Makowski D (2019). “insight: A Unified
-    Interface to Access Information from ModelObjects in R.” *Journal of
-    Open Source Software*, *4*(38), 1412. doi: 10.21105/joss.01412
-    (URL:<https://doi.org/10.21105/joss.01412>).
+    Interfaceto Access Information from Model Objects in R.” *Journal of
+    Open SourceSoftware*, *4*(38), 1412. doi: 10.21105/joss.01412
+    (URL:<a href="https://doi.org/10.21105/joss.01412" class="uri">https://doi.org/10.21105/joss.01412</a>).
 -   Lüdecke, Ben-Shachar, Waggoner & Makowski (2020). Visualisation
     Toolbox for ‘easystats’ and Extra Geoms, Themes and Color Palettes
-    for ‘ggplot2.’ CRAN. Available from
-    <https://easystats.github.io/see/>
+    for ‘ggplot2’. CRAN. Available from
+    <a href="https://easystats.github.io/see/" class="uri">https://easystats.github.io/see/</a>
 -   Lüdecke, Makowski, Waggoner & Patil (2020). Assessment of Regression
     Models Performance. CRAN. Available from
-    <https://easystats.github.io/performance/>
+    <a href="https://easystats.github.io/performance/" class="uri">https://easystats.github.io/performance/</a>
 -   Makowski, D., Ben-Shachar, M. S. & Lüdecke, D. (2020). *Estimation
     of Model-Based Predictions, Contrasts and Means*. CRAN.
--   Makowski, D., Ben-Shachar, M. S. & Lüdecke, D. (2020). *Estimation
-    of Model-Based Predictions, Contrasts and Means*. GitHub.
+-   Makowski, D., Ben-Shachar, M. S. & Lüdecke, D. (2020). *The
+    {easystats} collection of R packages*. GitHub.
 -   Makowski, D., Ben-Shachar, M. S., Patil, I., & Lüdecke, D. (2019).
     Methods and Algorithms for Correlation Analysis in R. Journal of
     Open Source Software, 5(51), 2306. 10.21105/joss.02306
 -   Makowski, D., Ben-Shachar, M., & Lüdecke, D. (2019). bayestestR:
     Describing Effects and their Uncertainty, Existence and Significance
     within the Bayesian Framework. Journal of Open Source Software,
-    4(40), 1541. <doi:10.21105/joss.01541>
+    4(40), 1541.
+    <a href="doi:10.21105/joss.01541" class="uri">doi:10.21105/joss.01541</a>
 -   Makowski, D., Lüdecke, D., & Ben-Shachar, M.S. (2020). Automated
     reporting as a practical tool to improve reproducibility and
     methodological best practices adoption. CRAN. Available from
-    <https://github.com/easystats/report>. doi: .
+    <a href="https://github.com/easystats/report" class="uri">https://github.com/easystats/report</a>.
+    doi: .
 -   R Core Team (2020). R: A language and environment for statistical
     computing. R Foundation for Statistical Computing, Vienna, Austria.
-    URL <https://www.R-project.org/>.
+    URL
+    <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.
 -   Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
-    Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686>
+    Source Software, 4(43), 1686,
+    <a href="https://doi.org/10.21105/joss.01686" class="uri">https://doi.org/10.21105/joss.01686</a>
 
-# References
-
-<div id="refs" class="references csl-bib-body hanging-indent"
-line-spacing="2">
-
-<div id="ref-ludecke2019insight" class="csl-entry">
+References
+==========
 
 Lüdecke, D., Waggoner, P. D., & Makowski, D. (2019). Insight: A unified
 interface to access information from model objects in r. *Journal of
 Open Source Software*, *4*(38), 1412.
-
-</div>
-
-</div>
