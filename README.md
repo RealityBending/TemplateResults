@@ -10,23 +10,36 @@ Introduction
 This is a template for a data analysis folder that can be easily
 exported as a
 [**webpage**](https://realitybending.github.io/TemplateResults/) or as
-**Supplementary Materials** (e.g., as a [word
-document](https://realitybending.github.io/TemplateResults/word/)). The
-README page of the repository, alongside the webpage and word document,
-were all created from the
+**Supplementary Materials** (e.g., as a [Word
+document](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+or a PDF).
+
+How does it look like? Just like this! The README page of this
+repository, alongside the webpage and word document, were all created
+from the
 [index.Rmd](https://github.com/RealityBending/TemplateResults/blob/main/index.Rmd)
-file that you can edit.
+file.
+
+This means you can easily **share** your data analysis, either by
+attaching the *PDF* or *Word* file to the publication, or by directly
+providing the URL of your GitHub repository: the readers can then enjoy
+your awesome open-access work in a convenient and transparent way.
 
 Features
 --------
 
--   [x] Rendered as a [README
-    page](https://github.com/RealityBending/TemplateResults/blob/main/README.md),
-    a [published
-    website](https://realitybending.github.io/TemplateResults/) and a
-    [word
-    document](https://github.com/RealityBending/TemplateResults/raw/main/word/SupplementaryMaterials.docx)
+-   [x] Automatically generates different types of document:
+    -   A [README
+        page](https://github.com/RealityBending/TemplateResults/blob/main/README.md)
+    -   A [**published
+        website**](https://realitybending.github.io/TemplateResults/)
+    -   A [**Word
+        document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+    -   A PDF document
 -   [x] APA citations
+-   [x] Automatic citations and [reference
+    list](https://github.com/RealityBending/TemplateResults#package-references)
+    for all packages
 -   [x] Tidy organisation (separate files for independent analyses)
 -   [x] Great default configuration
 -   [x] And more!
@@ -178,6 +191,8 @@ Descriptive Stats
 Part 1
 ------
 
+Here’s a cool plot:
+
 ``` r
 ggplot(df, aes(x=V1, y=V2, color=Participant)) + 
   geom_point() +
@@ -189,18 +204,29 @@ ggplot(df, aes(x=V1, y=V2, color=Participant)) +
 Part 2
 ------
 
-Let’s run some addition:
+That’s another great plot:
 
 ``` r
-1+1
+plot(bayestestR::estimate_density(df[c("V1", "V2")])) +
+  see::theme_blackboard()
 ```
 
-    > [1] 2
+![](figures/1_plot_density-1.png)
 
 Part 3
 ------
 
-I don’t know what else to do.
+Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not.
+It’s not a story the Jedi would tell you. It’s a Sith legend. Darth
+Plagueis was a Dark Lord of the Sith, so powerful and so wise he could
+use the Force to influence the midichlorians to create life… He had such
+a knowledge of the dark side that he could even keep the ones he cared
+about from dying. The dark side of the Force is a pathway to many
+abilities some consider to be unnatural. He became so powerful… the only
+thing he was afraid of was losing his power, which eventually, of
+course, he did. Unfortunately, he taught his apprentice everything he
+knew, then his apprentice killed him in his sleep. Ironic. He could save
+others from death, but not himself.
 
 Full Code
 =========
@@ -229,7 +255,8 @@ report::cite_packages(sessionInfo())
 ggplot(df, aes(x=V1, y=V2, color=Participant)) + 
   geom_point() +
   see::theme_modern()
-1+1
+plot(bayestestR::estimate_density(df[c("V1", "V2")])) +
+  see::theme_blackboard()
 ```
 
 Package References
