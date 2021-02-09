@@ -5,7 +5,11 @@
 Introduction
 ============
 
-![](https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg)
+![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg)
+[![Website](https://img.shields.io/badge/repo-README-2196F3)](https://github.com/RealityBending/TemplateResults)
+[![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/)
+[![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+[![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
 
 This is a template for a data analysis folder that can be easily
 exported as a
@@ -159,6 +163,8 @@ Packages & Data
 Packages
 --------
 
+This document was prepared on 2021-02-09.
+
 ``` r
 library(easystats)
 
@@ -180,9 +186,9 @@ Data
 ``` r
 df <- read.csv("data/data.csv")
 
-cat(paste("The data consists of", 
-          report::report_participants(df, 
-                                      participants = "Participant", 
+cat(paste("The data consists of",
+          report::report_participants(df,
+                                      participants = "Participant",
                                       age = "Age")))
 ```
 
@@ -191,6 +197,9 @@ The data consists of 10 participants (Mean age = 29.9, SD = 0.5, range:
 
 Descriptive Stats
 =================
+
+Notice the `{.tabset}` tag after the section name. This will show the
+subsections as different tabs (in html only).
 
 Part 1
 ------
@@ -232,6 +241,20 @@ course, he did. Unfortunately, he taught his apprentice everything he
 knew, then his apprentice killed him in his sleep. Ironic. He could save
 others from death, but not himself.
 
+Inferential Stats
+=================
+
+Here is another analysis that is contained in a separate file. Let’s
+check-out this linear regression model (note that, in the code chunk
+parameters, I multiplied `figheight` by 2 to have a taller plot):
+
+``` r
+model <- lm(Petal.Length ~ Sepal.Length, data=iris)
+performance::check_model(model)
+```
+
+![](figures/2_plot_model-1.png)
+
 Full Code
 =========
 
@@ -243,17 +266,23 @@ reproduced here.
 source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/utils/config.R")  
 
 fast <- FALSE  # Make this false to skip the chunks
-if (!knitr::is_latex_output()) {
-  knitr::include_graphics("https://github.com/RealityBending/TemplateResults/workflows/Website/badge.svg")
+# This chunk is a bit complex so don't worry about it: it's made to add badges to the HTML versions
+# You have to replace the links accordingly
+if (!any(c("word_document", "pdf_document") %in% rmarkdown::all_output_formats(knitr::current_input())[1])) {
+  cat("![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg) 
+      [![Website](https://img.shields.io/badge/repo-README-2196F3)](https://github.com/RealityBending/TemplateResults) 
+      [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/) 
+      [![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx) 
+      [![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
 }
 library(easystats)
 
 summary(report::report(sessionInfo()))
 df <- read.csv("data/data.csv")
 
-cat(paste("The data consists of", 
-          report::report_participants(df, 
-                                      participants = "Participant", 
+cat(paste("The data consists of",
+          report::report_participants(df,
+                                      participants = "Participant",
                                       age = "Age")))
 report::cite_packages(sessionInfo())
 ggplot(df, aes(x=V1, y=V2, color=Participant)) + 
@@ -261,6 +290,8 @@ ggplot(df, aes(x=V1, y=V2, color=Participant)) +
   see::theme_modern()
 plot(bayestestR::estimate_density(df[c("V1", "V2")])) +
   see::theme_blackboard()
+model <- lm(Petal.Length ~ Sepal.Length, data=iris)
+performance::check_model(model)
 ```
 
 Package References
