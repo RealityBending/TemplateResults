@@ -165,6 +165,33 @@ Part 3
 
 I don’t know what else to do.
 
+Full Code
+=========
+
+The full script of executive code contained in this document is
+reproduced here.
+
+``` r
+# Set up the environment (or use local alternative `source("utils/config.R")`)
+source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/utils/config.R")  
+
+fast <- FALSE  # Make this false to skip the chunks
+library(easystats)
+
+summary(report::report(sessionInfo()))
+df <- read.csv("data/data.csv")
+
+cat(paste("The data consists of", 
+          report::report_participants(df, 
+                                      participants = "Participant", 
+                                      age = "Age")))
+report::cite_packages(sessionInfo())
+ggplot(df, aes(x=V1, y=V2, color=Participant)) + 
+  geom_point() +
+  see::theme_modern()
+1+1
+```
+
 Package References
 ==================
 
