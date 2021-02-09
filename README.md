@@ -10,20 +10,23 @@ Introduction
 This is a template for a data analysis folder that can be easily
 exported as a
 [**webpage**](https://realitybending.github.io/TemplateResults/) or as
-**Supplementary Materials** (e.g., as a [Word
-document](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-or a PDF).
+**Supplementary Materials** (e.g., as a [**Word
+document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+or a
+[**PDF**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)).
 
 How does it look like? Just like this! The README page of this
-repository, alongside the webpage and word document, were all created
-from the
+repository, alongside the
+[webpage](https://realitybending.github.io/TemplateResults/) and the
+word and PDF documents, were all created from the
 [index.Rmd](https://github.com/RealityBending/TemplateResults/blob/main/index.Rmd)
 file.
 
-This means you can easily **share** your data analysis, either by
-attaching the *PDF* or *Word* file to the publication, or by directly
-providing the URL of your GitHub repository: the readers can then enjoy
-your awesome open-access work in a convenient and transparent way.
+This means you can easily **share your data analysis**, either by
+attaching the *PDF* or *Word* file to the publication (as
+**Supplementary Materials**), or by directly providing the URL of your
+GitHub repository: the readers can then enjoy your awesome open-access
+work in a convenient and transparent way.
 
 Features
 --------
@@ -35,7 +38,8 @@ Features
         website**](https://realitybending.github.io/TemplateResults/)
     -   A [**Word
         document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-    -   A PDF document
+    -   A [**PDF
+        document**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
 -   [x] APA citations
 -   [x] Automatic citations and [reference
     list](https://github.com/RealityBending/TemplateResults#package-references)
