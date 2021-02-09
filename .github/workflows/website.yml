@@ -12,10 +12,13 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - uses: r-lib/actions/setup-tinytex@v1
       - run: tlmgr --version
-      - name: Install Dependencies
+      - name: Install Core Dependencies
         run: |
             Rscript -e 'install.packages(c("rmarkdown", "remotes", "tidyverse", "insight", "bayestestR", "performance", "parameters", "effectsize", "modelbased", "correlation", "see"))'
             Rscript -e 'remotes::install_github("easystats/report")'
+      - name: Install Other Dependencies
+        run: |
+            Rscript -e 'install.packages(c("qqplotr", "gridExtra"))'
       - name: Render
         run: Rscript -e 'source("utils/render.R")'
       - name: Commit results
