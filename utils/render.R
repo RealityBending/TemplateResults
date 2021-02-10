@@ -6,13 +6,13 @@ if(!file.exists("index.Rmd") && file.exists("../index.Rmd")) {
 }
 
 # Render as README
-render('index.Rmd', output_format = md_document(variant = "markdown_github"), output_file = "README")
+rmarkdown::render('index.Rmd', output_format = rmarkdown::md_document(variant = "markdown_github"), output_file = "README")
 
 # Render HTML
-render('index.Rmd', output_format = "html_document", output_dir = "docs/")
+rmarkdown::render('index.Rmd', output_format = "html_document", output_dir = "docs/", output_file = "index")
 
 # Render Word
-render('index.Rmd', output_format = "word_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
+rmarkdown::render('index.Rmd', output_format = "word_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
 
 # Render PDF
-render('index.Rmd', output_format = "pdf_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
+rmarkdown::render('index.Rmd', output_format = "pdf_document", output_dir = "word_and_pdf/", output_file = "SupplementaryMaterials")
