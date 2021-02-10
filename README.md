@@ -210,6 +210,15 @@ cat(paste("The data consists of",
 The data consists of 10 participants (Mean age = 29.9, SD = 0.5, range:
 \[29.0, 30.91\])
 
+Note that the chunks generating figures in the code below have some
+arguments specified in their header, such as `fig.width` and
+`fig.height`, which controls the figure size. These were filled with an
+eponym argument defined in
+[`utils/config.R`](https://github.com/RealityBending/TemplateResults/blob/main/utils/config.R#L26-L27).
+We also set the resolution, i.e., `dpi`, to a low value so that the
+resulting file is lighter. But **don’t forget to crank this value up**
+(to 300-600) to get nice-looking results.
+
 Descriptive Stats
 =================
 
