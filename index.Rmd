@@ -77,6 +77,14 @@ This means you can easily **share your data analysis**, either by attaching the 
 - [x] Great default configuration
 - [x] And more!
 
+```{r demo_gif, echo=FALSE, message=TRUE, warning=FALSE}
+# Let's include a demo GIF (this doesn't work in PDF documents)
+if (!knitr::is_latex_output()) {
+  knitr::include_graphics("figures/demo.gif")
+}
+```
+
+
 ## Installation
 
 - **What is this?**
