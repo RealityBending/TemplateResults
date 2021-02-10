@@ -52,6 +52,8 @@ Features
 -   [x] Great default configuration
 -   [x] And more!
 
+![](figures/demo.gif)
+
 Installation
 ------------
 
@@ -212,7 +214,9 @@ Descriptive Stats
 =================
 
 Notice the `{.tabset}` tag after the section name. This will show the
-subsections as different tabs (in html only).
+subsections as different tabs (in the [html
+version](https://realitybending.github.io/TemplateResults/#Descriptive_Stats)
+only, because the other formats are static).
 
 Part 1
 ------
@@ -287,6 +291,10 @@ if (!knitr::is_latex_output() && knitr::is_html_output()) {
       [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/)
       [![Website](https://img.shields.io/badge/download-.docx-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
       [![Website](https://img.shields.io/badge/see-.pdf-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
+}
+# Let's include a demo GIF (this doesn't work in PDF documents)
+if (!knitr::is_latex_output()) {
+  knitr::include_graphics("figures/demo.gif")
 }
 library(easystats)
 
