@@ -8,7 +8,7 @@ editor_options:
 
 Here's a cool plot:
 
-```{r 1_plot_scatter_basic, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth}
+```{r 1_plot_scatter_basic, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth, dpi=150}
 ggplot(df, aes(x=V1, y=V2, color=Participant)) + 
   geom_point() +
   see::theme_modern()
@@ -21,7 +21,7 @@ ggplot(df, aes(x=V1, y=V2, color=Participant)) +
 That's another great plot:
 
 
-```{r 1_plot_density, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth}
+```{r 1_plot_density, warning=FALSE, message=FALSE, fig.heiht=figheight, fig.width=figwidth, dpi=150}
 plot(bayestestR::estimate_density(df[c("V1", "V2")])) +
   see::theme_blackboard()
 ```

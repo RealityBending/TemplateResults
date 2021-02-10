@@ -6,7 +6,7 @@ editor_options:
 
 Here is another analysis that is contained in a separate file. Let's check-out this linear regression model (note that, in the code chunk parameters, I multiplied `figheight` by 2 to have a taller plot):
 
-```{r 2_plot_model, warning=FALSE, message=FALSE, fig.heiht=figheight * 2, fig.width=figwidth}
+```{r 2_plot_model, warning=FALSE, message=FALSE, fig.heiht=figheight * 2, fig.width=figwidth, dpi=150}
 model <- lm(Petal.Length ~ Sepal.Length, data=iris)
 performance::check_model(model)
 ```
