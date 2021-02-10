@@ -67,10 +67,10 @@ This means you can easily **share your data analysis**, either by attaching the 
 ## Features
 
 - [x] Automatically generates different types of document:
-  - A [README page](https://github.com/RealityBending/TemplateResults/blob/main/README.md)
-  - A [**published website**](https://realitybending.github.io/TemplateResults/)
-  - A [**Word document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-  - A [**PDF document**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
+  - [**README page**](https://github.com/RealityBending/TemplateResults/blob/main/README.md)
+  - [**Published website**](https://realitybending.github.io/TemplateResults/)
+  - [**Word document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+  - [**PDF document**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
 - [x] APA citations
 - [x] Automatic citations and [reference list](https://github.com/RealityBending/TemplateResults#package-references) for all packages
 - [x] Tidy organisation (separate files for independent analyses)
@@ -79,15 +79,21 @@ This means you can easily **share your data analysis**, either by attaching the 
 
 ## Installation
 
+- **What is this?**
+
+This repository is a template to set up a reproducible, convenient and shareable workflow for your data analysis. It consists of several [*Rmarkdown*](https://rmarkdown.rstudio.com/lesson-1.html) files (`.Rmd`), that allow you to have R code and text (markdown) in the same document. Importantly, these files can be transformed into other documents formats.
+
 - **How to use this template?**
 
 Download it ([**click here to download**](https://github.com/RealityBending/TemplateResults/archive/main.zip)), unzip it and edit.
 Alternatively, you click on the [**Use this template**](https://github.com/RealityBending/TemplateResults/generate) button at the top of this screen to create a GitHub repository with all the content copied (then you just need to clone the repo to your local machine).
 
+The main files you need to edit are the `.Rmd` files, that you can open with some editor (e.g., [Rstudio](https://rstudio.com/)), and edit the text and the R chunks of code.
+
 
 - **How to upload it to a website?**
 
-If your repo is not already connected to GitHub, then create a new repository and upload all the content (so that it looks like this repo). Then, go to settings and enable **GitHub pages** (i.e., that gives you a webpage from an html stored on GitHub), and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/TemplateResults/](https://realitybending.github.io/TemplateResults/).
+If your repo is not already connected to GitHub, then create a new repository and upload all the content (so that it looks like this repo). Then, go to settings of the repo and enable **GitHub pages** (i.e., that gives you a webpage from an html stored on GitHub), and select the `docs/` folder as the location of the webpage. Indeed, rendering (knitting) the files will generate an "index.html" file in the `/docs/` folder, which is used as the website. You can see an example at [https://realitybending.github.io/TemplateResults/](https://realitybending.github.io/TemplateResults/).
 
 - **To knit or not to knit**
 
