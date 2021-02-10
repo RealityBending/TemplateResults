@@ -8,8 +8,8 @@ Introduction
 ![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg)
 [![Website](https://img.shields.io/badge/repo-Readme-2196F3)](https://github.com/RealityBending/TemplateResults)
 [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/)
-[![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-[![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
+[![Website](https://img.shields.io/badge/download-.docx-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+[![Website](https://img.shields.io/badge/see-.pdf-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
 
 This is a template for a data analysis folder that can be easily
 exported as a
@@ -36,13 +36,13 @@ Features
 --------
 
 -   [x] Automatically generates different types of document:
-    -   A [README
-        page](https://github.com/RealityBending/TemplateResults/blob/main/README.md)
-    -   A [**published
+    -   [**README
+        page**](https://github.com/RealityBending/TemplateResults/blob/main/README.md)
+    -   [**Published
         website**](https://realitybending.github.io/TemplateResults/)
-    -   A [**Word
+    -   [**Word
         document**](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-    -   A [**PDF
+    -   [**PDF
         document**](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)
 -   [x] APA citations
 -   [x] Automatic citations and [reference
@@ -55,6 +55,15 @@ Features
 Installation
 ------------
 
+-   **What is this?**
+
+This repository is a template to set up a reproducible, convenient and
+shareable workflow for your data analysis. It consists of several
+[*Rmarkdown*](https://rmarkdown.rstudio.com/lesson-1.html) files
+(`.Rmd`), that allow you to have R code and text (markdown) in the same
+document. Importantly, these files can be transformed into other
+documents formats.
+
 -   **How to use this template?**
 
 Download it ([**click here to
@@ -65,15 +74,19 @@ button at the top of this screen to create a GitHub repository with all
 the content copied (then you just need to clone the repo to your local
 machine).
 
+The main files you need to edit are the `.Rmd` files, that you can open
+with some editor (e.g., [Rstudio](https://rstudio.com/)), and edit the
+text and the R chunks of code.
+
 -   **How to upload it to a website?**
 
 If your repo is not already connected to GitHub, then create a new
 repository and upload all the content (so that it looks like this repo).
-Then, go to settings and enable **GitHub pages** (i.e., that gives you a
-webpage from an html stored on GitHub), and select the `docs/` folder as
-the location of the webpage. Indeed, rendering (knitting) the files will
-generate an “index.html” file in the `/docs/` folder, which is used as
-the website. You can see an example at
+Then, go to settings of the repo and enable **GitHub pages** (i.e., that
+gives you a webpage from an html stored on GitHub), and select the
+`docs/` folder as the location of the webpage. Indeed, rendering
+(knitting) the files will generate an “index.html” file in the `/docs/`
+folder, which is used as the website. You can see an example at
 <https://realitybending.github.io/TemplateResults/>.
 
 -   **To knit or not to knit**
@@ -163,7 +176,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-02-09.
+This document was prepared on 2021-02-10.
 
 ``` r
 library(easystats)
@@ -267,13 +280,13 @@ source("https://raw.githubusercontent.com/RealityBending/TemplateResults/main/ut
 
 fast <- FALSE  # Make this false to skip the chunks
 # This chunk is a bit complex so don't worry about it: it's made to add badges to the HTML versions
-# You have to replace the links accordingly
+# NOTE: You have to replace the links accordingly to have working "buttons" on the HTML versions
 if (!knitr::is_latex_output() && knitr::is_html_output()) {
   cat("![Build](https://github.com/RealityBending/TemplateResults/workflows/Build/badge.svg)
       [![Website](https://img.shields.io/badge/repo-Readme-2196F3)](https://github.com/RealityBending/TemplateResults)
       [![Website](https://img.shields.io/badge/visit-website-E91E63)](https://realitybending.github.io/TemplateResults/)
-      [![Website](https://img.shields.io/badge/download-Word-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
-      [![Website](https://img.shields.io/badge/see-PDF-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
+      [![Website](https://img.shields.io/badge/download-.docx-FF5722)](https://github.com/RealityBending/TemplateResults/raw/main/word_and_pdf/SupplementaryMaterials.docx)
+      [![Website](https://img.shields.io/badge/see-.pdf-FF9800)](https://github.com/RealityBending/TemplateResults/blob/main/word_and_pdf/SupplementaryMaterials.pdf)")
 }
 library(easystats)
 
