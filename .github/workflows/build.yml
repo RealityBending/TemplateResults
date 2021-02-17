@@ -5,7 +5,7 @@ name: Build
 jobs:
   render:
     name: Generate documents
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
@@ -14,7 +14,7 @@ jobs:
       - run: tlmgr --version
       - name: Install Core Dependencies
         run: |
-            Rscript -e 'install.packages(c("rmarkdown", "remotes", "tidyverse", "insight", "bayestestR", "performance", "parameters", "effectsize", "modelbased", "correlation", "see"))'
+            Rscript -e 'install.packages(c("curl", "rmarkdown", "remotes", "tidyverse", "insight", "bayestestR", "performance", "parameters", "effectsize", "modelbased", "correlation", "see"))'
             Rscript -e 'remotes::install_github("easystats/report")'
       - name: Install Other Dependencies
         run: |
