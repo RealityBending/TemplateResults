@@ -15,8 +15,8 @@ if (!"report" %in% installed) remotes::install_github("easystats/report")
 
 # Load packages silently
 for(pkg in c("tidyverse", "ggplot2", "easystats")){
-  if (!require(pkg, character.only=TRUE)) {
-    suppressWarnings(suppressPackageStartupMessages(library(pkg,character.only=TRUE)))
+  if (pkg %in% installed && !require(pkg, character.only=TRUE)) {
+    suppressWarnings(suppressPackageStartupMessages(library(pkg, character.only=TRUE)))
   }
 }
 
