@@ -8,7 +8,7 @@ for(pkg in c("knitr", "magrittr", "insight", "bayestestR", "parameters", "effect
 }
 # Because report and easystats are not on CRAN
 if (!"report" %in% installed) remotes::install_github("easystats/report")
-if (!"easystats" %in% installed) remotes::install_github("easystats/easystats")
+# if (!"easystats" %in% installed) remotes::install_github("easystats/easystats")
 
 
 

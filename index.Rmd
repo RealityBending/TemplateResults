@@ -143,7 +143,12 @@ Do not hesitate to improve this template by updating, documenting, or expanding 
 This document was prepared on `r format(Sys.Date())`. 
 
 ```{r warning=FALSE, message=TRUE, results='asis'}
-library(easystats)
+library(bayestestR)
+library(parameters)
+library(performance)
+library(report)
+library(see)
+library(ggplot2)
 
 summary(report::report(sessionInfo()))
 ```
