@@ -1,7 +1,7 @@
 installed <- rownames(installed.packages())
 
 # Install packages
-for(pkg in c("knitr", "magrittr", "insight", "bayestestR", "parameters", "effectsize", "performance", "correlation", "modelbased", "see", "remotes", "ggplot2")){
+for(pkg in c("curl", "knitr", "magrittr", "insight", "bayestestR", "parameters", "effectsize", "performance", "correlation", "modelbased", "see", "remotes", "ggplot2")){
   if (!pkg %in% installed){
     install.packages(pkg, repos = "http://cran.us.r-project.org")
   }
