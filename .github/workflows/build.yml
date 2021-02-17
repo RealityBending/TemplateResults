@@ -5,7 +5,7 @@ name: Build
 jobs:
   render:
     name: Generate documents
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
