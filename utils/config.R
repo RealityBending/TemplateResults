@@ -20,6 +20,8 @@ for(pkg in c("tidyverse", "ggplot2", "easystats")){
   }
 }
 
+# Install Python
+# py_install(packages = c('numpy', 'pandas', 'scipy', 'seaborn', 'matplotlib'))
 
 
 # Options relative to figure size

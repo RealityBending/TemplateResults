@@ -20,6 +20,11 @@ jobs:
       - name: Install Other Dependencies
         run: |
             Rscript -e 'install.packages(c("qqplotr", "gridExtra"))'
+      # The section below can be removed for added building speed on GitHub if you don't use Python
+      - name: Install Python
+        run: |
+            Rscript -e "remotes::install_github('rstudio/reticulate')"
+            Rscript -e "reticulate::install_miniconda()"
       - name: Render
         run: Rscript -e 'source("utils/render.R")'
       - name: Commit results

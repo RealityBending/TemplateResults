@@ -109,11 +109,19 @@ In this repo, with have set up a [GitHub action](https://github.com/RealityBendi
 
 - **But I don't want do upload all my data**
 
-In that case, you'll need to 1) deactivate (i.e., remove the action file) the automatic rendering by GitHub (as no data will be stored on GitHub) and 2) mark the **data** folder as "to be ignored" (so that it won't be uploaded). This can be done by adding `/data/` to the [**.gitignore**](https://github.com/RealityBending/TemplateResults/blob/main/.gitignore) file (that you can open with a notepad). This means that you can still store the data here locally, and generate the documents accordingly, but the data folder will be ignored by git and never uploaded to GitHub. This way, you can still have a cool website, an open-access script, but the data is safe with you.
+In that case, you'll need to 1) deactivate (i.e., remove the action file) the automatic rendering by GitHub (as no data will be stored on GitHub) and 2) mark the **data** folder as "to be ignored" (so that it won't be uploaded). This can be done by adding `/data/` to the [**.gitignore**](https://github.com/RealityBending/TemplateResults/blob/main/.gitignore) file (that you can open with a notepad). This means that you can still store the data here locally, and generate the documents accordingly, but the data folder will be ignored by git and never uploaded to GitHub. This way, you can still have a cool website, an open-access script, but the data is safe with you. The only down side is that you have to build it manually (cannot use GitHub actions).
 
 - **How to add references?**
 
 References have to be added in `bib` format in the [*utils/bibliography.bib*](https://github.com/RealityBending/TemplateResults/blob/main/utils/bibliography.bib) file, and further referenced in the text like this `[@ludecke2019insight]` [@ludecke2019insight].
+
+- **I don't like the Word (.docx) theme**
+
+The theme for the word document is defined in the [**Template_Word.docx](https://github.com/RealityBending/TemplateResults/tree/main/utils) file, in the `/utils/` folder. You need to edit the "styles" (not just the content, but the style itself) to your preference.
+
+- **I have Python code**
+
+Thanks to R's possibilities when it comes to integration with Python, it's super easy to enable it in your pipeline. 
 
 - **It doesn't work / I have questions / I have ideas**
 
