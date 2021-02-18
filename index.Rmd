@@ -121,7 +121,7 @@ The theme for the word document is defined in the [**Template_Word.docx](https:/
 
 - **I have Python code**
 
-Thanks to R's possibilities when it comes to integration with Python, it's super easy to enable it in your pipeline. 
+Thanks to R's possibilities when it comes to integration with Python, it's super easy to enable it in your pipeline. Just uncomment the [Python installation line](https://github.com/RealityBending/TemplateResults/blob/main/utils/config.R#L24) in the `utils/config.R` file and you're ready to go!
 
 - **It doesn't work / I have questions / I have ideas**
 
