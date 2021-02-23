@@ -1,4 +1,9 @@
-on: push
+on:
+  push:
+    branches:
+      - main
+  schedule:  # run every week
+    - cron:  '0 0 * * 1'
 
 name: Build
 
