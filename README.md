@@ -113,7 +113,8 @@ file (that you can open with a notepad). This means that you can still
 store the data here locally, and generate the documents accordingly, but
 the data folder will be ignored by git and never uploaded to GitHub.
 This way, you can still have a cool website, an open-access script, but
-the data is safe with you.
+the data is safe with you. The only down side is that you have to build
+it manually (cannot use GitHub actions).
 
 -   **How to add references?**
 
@@ -121,6 +122,21 @@ References have to be added in `bib` format in the
 [*utils/bibliography.bib*](https://github.com/RealityBending/TemplateResults/blob/main/utils/bibliography.bib)
 file, and further referenced in the text like this
 `[@ludecke2019insight]` (Lüdecke, Waggoner, & Makowski, 2019).
+
+-   **I don’t like the Word (.docx) theme**
+
+The theme for the word document is defined in the
+[\*\*Template\_Word.docx](https://github.com/RealityBending/TemplateResults/tree/main/utils)
+file, in the `/utils/` folder. You need to edit the “styles” (not just
+the content, but the style itself) to your preference.
+
+-   **I have Python code**
+
+Thanks to R’s possibilities when it comes to integration with Python,
+it’s super easy to enable it in your pipeline. Just uncomment the
+[Python installation
+line](https://github.com/RealityBending/TemplateResults/blob/main/utils/config.R#L24)
+in the `utils/config.R` file and you’re ready to go!
 
 -   **It doesn’t work / I have questions / I have ideas**
 
@@ -178,22 +194,35 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-02-10.
+This document was prepared on 2021-03-13.
 
 ``` r
-library(easystats)
+library(bayestestR)
+```
+
+    > Note: The default CI width (currently `ci=0.89`) might change in future versions (see https://github.com/easystats/bayestestR/discussions/250). To prevent any issues, please set it explicitly when using bayestestR functions, via the 'ci' argument.
+
+``` r
+library(parameters)
+library(performance)
+library(report)
+```
+
+    > report is in alpha - help us improve by reporting bugs on github.com/easystats/report/issues
+
+``` r
+library(see)
+library(ggplot2)
 
 summary(report::report(sessionInfo()))
 ```
 
-The analysis was done using the R Statistical language (v4.0.3; R Core
-Team, 2020) on macOS Catalina 10.15.7, using the packages effectsize
-(v0.4.3.2), ggplot2 (v3.3.3), stringr (v1.4.0), tidyr (v1.1.2), forcats
-(v0.5.1), readr (v1.4.0), dplyr (v1.0.4), rmarkdown (v2.6), tibble
-(v3.0.6), purrr (v0.3.4), parameters (v0.11.0.1), insight (v0.12.0.1),
-see (v0.6.2.1), performance (v0.7.0), modelbased (v0.5.1), easystats
-(v0.2.0), correlation (v0.5.1), bayestestR (v0.8.2.1), report (v0.2.0)
-and tidyverse (v1.3.0).
+The analysis was done using the R Statistical language (v4.0.4; R Core
+Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
+(v3.3.3), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
+(v1.4.0), dplyr (v1.0.5), rmarkdown (v2.7), tibble (v3.1.0), purrr
+(v0.3.4), parameters (v0.12.0.1), see (v0.6.2), performance (v0.7.0.1),
+bayestestR (v0.8.3.1), report (v0.2.0) and tidyverse (v1.3.0).
 
 Data
 ----
@@ -305,7 +334,12 @@ if (!knitr::is_latex_output() && knitr::is_html_output()) {
 if (!knitr::is_latex_output()) {
   knitr::include_graphics("figures/demo.gif")
 }
-library(easystats)
+library(bayestestR)
+library(parameters)
+library(performance)
+library(report)
+library(see)
+library(ggplot2)
 
 summary(report::report(sessionInfo()))
 df <- read.csv("data/data.csv")
@@ -331,34 +365,31 @@ Package References
 report::cite_packages(sessionInfo())
 ```
 
--   Ben-Shachar M, Lüdecke D, Makowski D (2020). effectsize: Estimation
-    of Effect Size Indices and Standardized Parameters. Journal of Open
-    Source Software, 5(56), 2815. doi: 10.21105/joss.02815
 -   H. Wickham. ggplot2: Elegant Graphics for Data Analysis.
     Springer-Verlag New York, 2016.
 -   Hadley Wickham (2019). stringr: Simple, Consistent Wrappers for
     Common String Operations. R package version 1.4.0.
     <a href="https://CRAN.R-project.org/package=stringr" class="uri">https://CRAN.R-project.org/package=stringr</a>
--   Hadley Wickham (2020). tidyr: Tidy Messy Data. R package version
-    1.1.2.
-    <a href="https://CRAN.R-project.org/package=tidyr" class="uri">https://CRAN.R-project.org/package=tidyr</a>
 -   Hadley Wickham (2021). forcats: Tools for Working with Categorical
     Variables (Factors). R package version 0.5.1.
     <a href="https://CRAN.R-project.org/package=forcats" class="uri">https://CRAN.R-project.org/package=forcats</a>
+-   Hadley Wickham (2021). tidyr: Tidy Messy Data. R package version
+    1.1.3.
+    <a href="https://CRAN.R-project.org/package=tidyr" class="uri">https://CRAN.R-project.org/package=tidyr</a>
 -   Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text
     Data. R package version 1.4.0.
     <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>
 -   Hadley Wickham, Romain François, Lionel Henry and Kirill Müller
     (2021). dplyr: A Grammar of Data Manipulation. R package version
-    1.0.4.
+    1.0.5.
     <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>
 -   JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi
     and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and
-    Winston Chang and Richard Iannone (2020). rmarkdown: Dynamic
-    Documents for R. R package version 2.6. URL
+    Winston Chang and Richard Iannone (2021). rmarkdown: Dynamic
+    Documents for R. R package version 2.7. URL
     <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.
 -   Kirill Müller and Hadley Wickham (2021). tibble: Simple Data Frames.
-    R package version 3.0.6.
+    R package version 3.1.0.
     <a href="https://CRAN.R-project.org/package=tibble" class="uri">https://CRAN.R-project.org/package=tibble</a>
 -   Lionel Henry and Hadley Wickham (2020). purrr: Functional
     Programming Tools. R package version 0.3.4.
@@ -370,10 +401,6 @@ report::cite_packages(sessionInfo())
     <a href="doi:10.21105/joss.02445" class="uri">doi:10.21105/joss.02445</a>
     (URL:
     <a href="https://doi.org/10.21105/joss.02445" class="uri">https://doi.org/10.21105/joss.02445</a>).
--   Lüdecke D, Waggoner P, Makowski D (2019). “insight: A Unified
-    Interfaceto Access Information from Model Objects in R.” *Journal of
-    Open SourceSoftware*, *4*(38), 1412. doi: 10.21105/joss.01412
-    (URL:<a href="https://doi.org/10.21105/joss.01412" class="uri">https://doi.org/10.21105/joss.01412</a>).
 -   Lüdecke, Ben-Shachar, Waggoner & Makowski (2020). Visualisation
     Toolbox for ‘easystats’ and Extra Geoms, Themes and Color Palettes
     for ‘ggplot2’. CRAN. Available from
@@ -381,13 +408,6 @@ report::cite_packages(sessionInfo())
 -   Lüdecke, Makowski, Waggoner & Patil (2020). Assessment of Regression
     Models Performance. CRAN. Available from
     <a href="https://easystats.github.io/performance/" class="uri">https://easystats.github.io/performance/</a>
--   Makowski, D., Ben-Shachar, M. S. & Lüdecke, D. (2020). *Estimation
-    of Model-Based Predictions, Contrasts and Means*. CRAN.
--   Makowski, D., Ben-Shachar, M. S. & Lüdecke, D. (2020). *The
-    {easystats} collection of R packages*. GitHub.
--   Makowski, D., Ben-Shachar, M. S., Patil, I., & Lüdecke, D. (2019).
-    Methods and Algorithms for Correlation Analysis in R. Journal of
-    Open Source Software, 5(51), 2306. 10.21105/joss.02306
 -   Makowski, D., Ben-Shachar, M., & Lüdecke, D. (2019). bayestestR:
     Describing Effects and their Uncertainty, Existence and Significance
     within the Bayesian Framework. Journal of Open Source Software,
@@ -398,7 +418,7 @@ report::cite_packages(sessionInfo())
     methodological best practices adoption. CRAN. Available from
     <a href="https://github.com/easystats/report" class="uri">https://github.com/easystats/report</a>.
     doi: .
--   R Core Team (2020). R: A language and environment for statistical
+-   R Core Team (2021). R: A language and environment for statistical
     computing. R Foundation for Statistical Computing, Vienna, Austria.
     URL
     <a href="https://www.R-project.org/" class="uri">https://www.R-project.org/</a>.
