@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-03-13.
+This document was prepared on 2021-03-15.
 
 ``` r
 library(bayestestR)
