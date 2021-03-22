@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-03-15.
+This document was prepared on 2021-03-22.
 
 ``` r
 library(bayestestR)
@@ -405,17 +405,17 @@ report::cite_packages(sessionInfo())
     Toolbox for ‘easystats’ and Extra Geoms, Themes and Color Palettes
     for ‘ggplot2’. CRAN. Available from
     <a href="https://easystats.github.io/see/" class="uri">https://easystats.github.io/see/</a>
--   Lüdecke, Makowski, Waggoner & Patil (2020). Assessment of Regression
-    Models Performance. CRAN. Available from
+-   Lüdecke, Makowski, Ben-Shachar, Patil, & Waggoner (2020). Assessment
+    of Regression Models Performance. CRAN. Available from
     <a href="https://easystats.github.io/performance/" class="uri">https://easystats.github.io/performance/</a>
 -   Makowski, D., Ben-Shachar, M., & Lüdecke, D. (2019). bayestestR:
     Describing Effects and their Uncertainty, Existence and Significance
     within the Bayesian Framework. Journal of Open Source Software,
     4(40), 1541.
     <a href="doi:10.21105/joss.01541" class="uri">doi:10.21105/joss.01541</a>
--   Makowski, D., Lüdecke, D., & Ben-Shachar, M.S. (2020). Automated
-    reporting as a practical tool to improve reproducibility and
-    methodological best practices adoption. CRAN. Available from
+-   Makowski, D., Ben-Shachar, M.S., Patil, I. & Lüdecke, D. (2020).
+    Automated reporting as a practical tool to improve reproducibility
+    and methodological best practices adoption. CRAN. Available from
     <a href="https://github.com/easystats/report" class="uri">https://github.com/easystats/report</a>.
     doi: .
 -   R Core Team (2021). R: A language and environment for statistical
