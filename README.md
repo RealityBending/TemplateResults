@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-03-22.
+This document was prepared on 2021-03-29.
 
 ``` r
 library(bayestestR)
@@ -221,8 +221,8 @@ The analysis was done using the R Statistical language (v4.0.4; R Core
 Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
 (v3.3.3), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
 (v1.4.0), dplyr (v1.0.5), rmarkdown (v2.7), tibble (v3.1.0), purrr
-(v0.3.4), parameters (v0.12.0.1), see (v0.6.2), performance (v0.7.0.1),
-bayestestR (v0.8.3.1), report (v0.2.0) and tidyverse (v1.3.0).
+(v0.3.4), parameters (v0.12.0), see (v0.6.2), performance (v0.7.0),
+bayestestR (v0.8.2), report (v0.2.0) and tidyverse (v1.3.0).
 
 Data
 ----
@@ -405,8 +405,8 @@ report::cite_packages(sessionInfo())
     Toolbox for ‘easystats’ and Extra Geoms, Themes and Color Palettes
     for ‘ggplot2’. CRAN. Available from
     <a href="https://easystats.github.io/see/" class="uri">https://easystats.github.io/see/</a>
--   Lüdecke, Makowski, Ben-Shachar, Patil, & Waggoner (2020). Assessment
-    of Regression Models Performance. CRAN. Available from
+-   Lüdecke, Makowski, Waggoner & Patil (2020). Assessment of Regression
+    Models Performance. CRAN. Available from
     <a href="https://easystats.github.io/performance/" class="uri">https://easystats.github.io/performance/</a>
 -   Makowski, D., Ben-Shachar, M., & Lüdecke, D. (2019). bayestestR:
     Describing Effects and their Uncertainty, Existence and Significance
