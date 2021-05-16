@@ -194,23 +194,13 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-04-05.
+This document was prepared on 2021-05-16.
 
 ``` r
 library(bayestestR)
-```
-
-    > Note: The default CI width (currently `ci=0.89`) might change in future versions (see https://github.com/easystats/bayestestR/discussions/250). To prevent any issues, please set it explicitly when using bayestestR functions, via the 'ci' argument.
-
-``` r
 library(parameters)
 library(performance)
 library(report)
-```
-
-    > report is in alpha - help us improve by reporting bugs on github.com/easystats/report/issues
-
-``` r
 library(see)
 library(ggplot2)
 
@@ -220,9 +210,9 @@ summary(report::report(sessionInfo()))
 The analysis was done using the R Statistical language (v4.0.5; R Core
 Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
 (v3.3.3), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
-(v1.4.0), dplyr (v1.0.5), rmarkdown (v2.7), tibble (v3.1.0), purrr
-(v0.3.4), parameters (v0.12.0), see (v0.6.2), performance (v0.7.0),
-bayestestR (v0.8.2), report (v0.2.0) and tidyverse (v1.3.0).
+(v1.4.0), dplyr (v1.0.6), rmarkdown (v2.8), tibble (v3.1.1), purrr
+(v0.3.4), parameters (v0.13.0), performance (v0.7.1), see (v0.6.3),
+bayestestR (v0.9.0), report (v0.3.0.9000) and tidyverse (v1.3.1).
 
 Data
 ----
@@ -381,15 +371,15 @@ report::cite_packages(sessionInfo())
     <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>
 -   Hadley Wickham, Romain François, Lionel Henry and Kirill Müller
     (2021). dplyr: A Grammar of Data Manipulation. R package version
-    1.0.5.
+    1.0.6.
     <a href="https://CRAN.R-project.org/package=dplyr" class="uri">https://CRAN.R-project.org/package=dplyr</a>
 -   JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi
     and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and
     Winston Chang and Richard Iannone (2021). rmarkdown: Dynamic
-    Documents for R. R package version 2.7. URL
+    Documents for R. R package version 2.8. URL
     <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.
 -   Kirill Müller and Hadley Wickham (2021). tibble: Simple Data Frames.
-    R package version 3.1.0.
+    R package version 3.1.1.
     <a href="https://CRAN.R-project.org/package=tibble" class="uri">https://CRAN.R-project.org/package=tibble</a>
 -   Lionel Henry and Hadley Wickham (2020). purrr: Functional
     Programming Tools. R package version 0.3.4.
@@ -401,21 +391,23 @@ report::cite_packages(sessionInfo())
     <a href="doi:10.21105/joss.02445" class="uri">doi:10.21105/joss.02445</a>
     (URL:
     <a href="https://doi.org/10.21105/joss.02445" class="uri">https://doi.org/10.21105/joss.02445</a>).
--   Lüdecke, Ben-Shachar, Waggoner & Makowski (2020). Visualisation
-    Toolbox for ‘easystats’ and Extra Geoms, Themes and Color Palettes
-    for ‘ggplot2’. CRAN. Available from
+-   Lüdecke et al., (2021). Assessment, Testing and Comparison of
+    Statistical Models using R. Journal of Open Source Software,
+    6(59), 3112.
+    <a href="https://doi.org/10.31234/osf.io/vtq8f" class="uri">https://doi.org/10.31234/osf.io/vtq8f</a>
+-   Lüdecke, Ben-Shachar, Patil, Waggoner & Makowski (2020).
+    Visualisation Toolbox for ‘easystats’ and Extra Geoms, Themes and
+    Color Palettes for ‘ggplot2’. CRAN. Available from
     <a href="https://easystats.github.io/see/" class="uri">https://easystats.github.io/see/</a>
--   Lüdecke, Makowski, Waggoner & Patil (2020). Assessment of Regression
-    Models Performance. CRAN. Available from
-    <a href="https://easystats.github.io/performance/" class="uri">https://easystats.github.io/performance/</a>
 -   Makowski, D., Ben-Shachar, M., & Lüdecke, D. (2019). bayestestR:
     Describing Effects and their Uncertainty, Existence and Significance
     within the Bayesian Framework. Journal of Open Source Software,
     4(40), 1541.
     <a href="doi:10.21105/joss.01541" class="uri">doi:10.21105/joss.01541</a>
 -   Makowski, D., Ben-Shachar, M.S., Patil, I. & Lüdecke, D. (2020).
-    Automated reporting as a practical tool to improve reproducibility
-    and methodological best practices adoption. CRAN. Available from
+    Automated Results Reporting as a Practical Tool to Improve
+    Reproducibility and Methodological Best Practices Adoption. CRAN.
+    Available from
     <a href="https://github.com/easystats/report" class="uri">https://github.com/easystats/report</a>.
     doi: .
 -   R Core Team (2021). R: A language and environment for statistical
