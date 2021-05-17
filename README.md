@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-05-16.
+This document was prepared on 2021-05-17.
 
 ``` r
 library(bayestestR)
@@ -210,7 +210,7 @@ summary(report::report(sessionInfo()))
 The analysis was done using the R Statistical language (v4.0.5; R Core
 Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
 (v3.3.3), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
-(v1.4.0), dplyr (v1.0.6), rmarkdown (v2.8), tibble (v3.1.1), purrr
+(v1.4.0), dplyr (v1.0.6), rmarkdown (v2.8), tibble (v3.1.2), purrr
 (v0.3.4), parameters (v0.13.0), performance (v0.7.1), see (v0.6.3),
 bayestestR (v0.9.0), report (v0.3.0.9000) and tidyverse (v1.3.1).
 
@@ -379,7 +379,7 @@ report::cite_packages(sessionInfo())
     Documents for R. R package version 2.8. URL
     <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.
 -   Kirill Müller and Hadley Wickham (2021). tibble: Simple Data Frames.
-    R package version 3.1.1.
+    R package version 3.1.2.
     <a href="https://CRAN.R-project.org/package=tibble" class="uri">https://CRAN.R-project.org/package=tibble</a>
 -   Lionel Henry and Hadley Wickham (2020). purrr: Functional
     Programming Tools. R package version 0.3.4.
