@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-05-17.
+This document was prepared on 2021-05-24.
 
 ``` r
 library(bayestestR)
@@ -211,7 +211,7 @@ The analysis was done using the R Statistical language (v4.0.5; R Core
 Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
 (v3.3.3), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
 (v1.4.0), dplyr (v1.0.6), rmarkdown (v2.8), tibble (v3.1.2), purrr
-(v0.3.4), parameters (v0.13.0), performance (v0.7.1), see (v0.6.3),
+(v0.3.4), parameters (v0.13.0.1), performance (v0.7.2), see (v0.6.3),
 bayestestR (v0.9.0), report (v0.3.0.9000) and tidyverse (v1.3.1).
 
 Data
@@ -391,10 +391,10 @@ report::cite_packages(sessionInfo())
     <a href="doi:10.21105/joss.02445" class="uri">doi:10.21105/joss.02445</a>
     (URL:
     <a href="https://doi.org/10.21105/joss.02445" class="uri">https://doi.org/10.21105/joss.02445</a>).
--   Lüdecke et al., (2021). Assessment, Testing and Comparison of
-    Statistical Models using R. Journal of Open Source Software,
-    6(59), 3112.
-    <a href="https://doi.org/10.31234/osf.io/vtq8f" class="uri">https://doi.org/10.31234/osf.io/vtq8f</a>
+-   Lüdecke et al., (2021). performance: An R Package for Assessment,
+    Comparison and Testing of Statistical Models. Journal of Open Source
+    Software, 6(60), 3139.
+    <a href="https://doi.org/10.21105/joss.03139" class="uri">https://doi.org/10.21105/joss.03139</a>
 -   Lüdecke, Ben-Shachar, Patil, Waggoner & Makowski (2020).
     Visualisation Toolbox for ‘easystats’ and Extra Geoms, Themes and
     Color Palettes for ‘ggplot2’. CRAN. Available from
