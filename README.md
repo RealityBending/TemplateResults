@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-06-21.
+This document was prepared on 2021-06-28.
 
 ``` r
 library(bayestestR)
@@ -209,7 +209,7 @@ summary(report::report(sessionInfo()))
 
 The analysis was done using the R Statistical language (v4.1.0; R Core
 Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
-(v3.3.4), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
+(v3.3.5), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
 (v1.4.0), dplyr (v1.0.7), rmarkdown (v2.9), tibble (v3.1.2), purrr
 (v0.3.4), parameters (v0.14.0.1), performance (v0.7.2.1), see (v0.6.4),
 bayestestR (v0.10.5), report (v0.3.5) and tidyverse (v1.3.1).
