@@ -194,7 +194,7 @@ Packages & Data
 Packages
 --------
 
-This document was prepared on 2021-07-19.
+This document was prepared on 2021-07-26.
 
 ``` r
 library(bayestestR)
@@ -210,8 +210,8 @@ summary(report::report(sessionInfo()))
 The analysis was done using the R Statistical language (v4.1.0; R Core
 Team, 2021) on macOS Catalina 10.15.7, using the packages ggplot2
 (v3.3.5), stringr (v1.4.0), forcats (v0.5.1), tidyr (v1.1.3), readr
-(v1.4.0), dplyr (v1.0.7), rmarkdown (v2.9), tibble (v3.1.2), purrr
-(v0.3.4), parameters (v0.14.0.1), performance (v0.7.2.1), see (v0.6.4),
+(v2.0.0), dplyr (v1.0.7), rmarkdown (v2.9), tibble (v3.1.3), purrr
+(v0.3.4), parameters (v0.14.0.1), performance (v0.7.3.1), see (v0.6.4),
 bayestestR (v0.10.5), report (v0.3.5) and tidyverse (v1.3.1).
 
 Data
@@ -366,8 +366,8 @@ report::cite_packages(sessionInfo())
 -   Hadley Wickham (2021). tidyr: Tidy Messy Data. R package version
     1.1.3.
     <a href="https://CRAN.R-project.org/package=tidyr" class="uri">https://CRAN.R-project.org/package=tidyr</a>
--   Hadley Wickham and Jim Hester (2020). readr: Read Rectangular Text
-    Data. R package version 1.4.0.
+-   Hadley Wickham and Jim Hester (2021). readr: Read Rectangular Text
+    Data. R package version 2.0.0.
     <a href="https://CRAN.R-project.org/package=readr" class="uri">https://CRAN.R-project.org/package=readr</a>
 -   Hadley Wickham, Romain François, Lionel Henry and Kirill Müller
     (2021). dplyr: A Grammar of Data Manipulation. R package version
@@ -379,7 +379,7 @@ report::cite_packages(sessionInfo())
     Documents for R. R package version 2.9. URL
     <a href="https://rmarkdown.rstudio.com" class="uri">https://rmarkdown.rstudio.com</a>.
 -   Kirill Müller and Hadley Wickham (2021). tibble: Simple Data Frames.
-    R package version 3.1.2.
+    R package version 3.1.3.
     <a href="https://CRAN.R-project.org/package=tibble" class="uri">https://CRAN.R-project.org/package=tibble</a>
 -   Lionel Henry and Hadley Wickham (2020). purrr: Functional
     Programming Tools. R package version 0.3.4.
